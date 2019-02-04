@@ -14,6 +14,21 @@ app.get('/products/:productID', (req, res) => {
     res.send('Här kommer info om produkt: ' + req.params.productID);
 });
 
+app.get('/json', (req,res) => {
+    res.json (
+        [
+            {
+                user: 'jimmy',
+                age: 32
+            },
+            {
+                user: 'hayley',
+                age:2
+            }
+        ]
+    )
+});
+
 // http://localhost:3000/products?category=2345 query
 app.get('/products', (req, res) => {
     res.send('Här kommer info från queryn: ' + req.query.category)
