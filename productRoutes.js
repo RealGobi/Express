@@ -13,5 +13,6 @@ router.get('/:productID', (req, res) => {
     res.send('Här kommer info om produkt: ' + req.params.productID);
 });
 
+
 // här exporterar vi 
 module.exports = router;
