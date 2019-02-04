@@ -13,7 +13,7 @@ app.get('/about', (req, res)=>{
 app.get('/products/:productID', (req, res) => {
     res.send('Här kommer info om produkt: ' + req.params.productID);
 });
-
+// http://localhost:3000/json
 app.get('/json', (req,res) => {
     res.json (
         [
