@@ -27,6 +27,14 @@ router.get('/json', (req,res) => {
         ]
     )
 });
+// om vi har flerspråkig sajt, kan man göra detta för att länka till olika sidor
+router.get('/om-oss', (req, res) => {
+    var options = { root: __dirname + '/se'};
+    res.sendFile('om-oss.html', options), (err) => {
+        if (err)
+        console.error(err);
+    };
+});
 
 // här exporterar vi 
 

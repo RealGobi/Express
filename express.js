@@ -9,6 +9,8 @@ var productsRoutes = require('./productRoutes.js');
 app.use('/', router);
 app.use('/products', productsRoutes);
 
+
+
 //lyssnar på en port
 app.listen(port, ()=>{
     console.log(`Server lyssnar på port: ${port}`)
