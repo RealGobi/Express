@@ -1,5 +1,6 @@
 // splitrat upp i olika filer, bytt ordet app => router
 const express = require('express');
+
 //notera stort R på router här
 var router = express.Router();
 
@@ -12,7 +13,6 @@ router.get('/', (req, res) => {
 router.get('/:productID', (req, res) => {
     res.send('Här kommer info om produkt: ' + req.params.productID);
 });
-
 
 // här exporterar vi 
 module.exports = router;

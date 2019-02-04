@@ -1,17 +1,24 @@
 // splitrat upp i olika filer, bytt ordet app => router
 const express = require('express');
+
 //notera stort R på router här
 var router = express.Router();
  
-
 // http://localhost:3000/
 router.get('/', (req,res)=>{
     res.send('Hej');
 });
+
+// http://localhost:3000/index.html
+router.get('/index', (req, res)=>{
+    res.sendFile(__dirname + '/index.html');
+});
+
 // http://localhost:3000/about.html
 router.get('/about', (req, res)=>{
     res.sendFile(__dirname + '/about.html');
 });
+
 // http://localhost:3000/json
 router.get('/json', (req,res) => {
     res.json (
@@ -27,6 +34,7 @@ router.get('/json', (req,res) => {
         ]
     )
 });
+
 // om vi har flerspråkig sajt, kan man göra detta för att länka till olika sidor
 router.get('/om-oss', (req, res) => {
     var options = { root: __dirname + '/se'};
@@ -37,5 +45,4 @@ router.get('/om-oss', (req, res) => {
 });
 
 // här exporterar vi 
-
 module.exports = router;
